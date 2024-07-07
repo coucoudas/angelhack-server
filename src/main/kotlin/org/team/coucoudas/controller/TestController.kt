@@ -10,6 +10,6 @@ class TestController {
 
     @GetMapping
     fun hello(): String {
-        return "Jenkins Auto Build Test"
+        return "jenkins webhook test"
     }
 }
