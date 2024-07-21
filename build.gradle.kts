@@ -47,10 +47,12 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-tasks.withType<Copy> {
-    copy {
-        from("./server-config")
-        include("*.yml")
-        into("src/main/resources")
-    }
+tasks.register<Copy>("copyConfigFile") {
+    from("./server-config")
+    include("*.yml")
+    into("src/main/resources")
+}
+
+tasks.named("processResources") {
+    dependsOn("copyConfigFile")
 }
