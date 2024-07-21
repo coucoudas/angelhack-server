@@ -33,7 +33,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
-    implementation("mysql:mysql-connector-java:8.0.32")
+    implementation("mysql:mysql-connector-java:8.0.35")
 }
 
 tasks.withType<KotlinCompile> {
@@ -45,14 +45,4 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-}
-
-tasks.register<Copy>("copyConfigFile") {
-    from("./server-config")
-    include("*.yml")
-    into("src/main/resources")
-}
-
-tasks.named("processResources") {
-    dependsOn("copyConfigFile")
 }
