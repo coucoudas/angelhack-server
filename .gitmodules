@@ -1,3 +1,0 @@
-[submodule "server-config"]
-	path = server-config
-	url = https://github.com/coucoudas/server-config.git
