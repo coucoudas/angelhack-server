@@ -47,20 +47,10 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-//tasks.withType<Copy> {
-//    copy {
-//        from("./server-config")
-//        include("*.yml")
-//        into("src/main/resources")
-//    }
-//}
-
 tasks.withType<Copy> {
-    from("./server-config") {
+    copy {
+        from("./server-config")
         include("*.yml")
-    }
-    into("src/main/resources")
-    doLast {
-        println("Copied .yml files to src/main/resources")
+        into("src/main/resources")
     }
 }
