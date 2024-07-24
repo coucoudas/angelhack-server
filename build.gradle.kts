@@ -33,7 +33,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
-    implementation("mysql:mysql-connector-java:8.0.35")
+    implementation("mysql:mysql-connector-java:8.0.33")
 }
 
 tasks.withType<KotlinCompile> {
